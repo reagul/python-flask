@@ -1,0 +1,24 @@
+resources:
+- name: tutorial
+  type: git
+  source:
+    uri: https://github.com/reagul/python-flask
+
+- name: hello-world-docker-image
+  type: docker-image
+  source:
+    email: reagul.gmail.com
+    username: ravij
+    password: Welcome123
+    repository: ravij/concourse-tutorial-helloworld
+
+jobs:
+- name: publish
+  public: true
+  serial: true
+  plan:
+  - get: tutorial
+  - put: hello-world-docker-image
+    params:
+      build: .
+
