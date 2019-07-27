@@ -20,5 +20,5 @@ jobs:
   - get: tutorial
   - put: hello-world-docker-image
     params:
-      build: .
+      build: ci
 
