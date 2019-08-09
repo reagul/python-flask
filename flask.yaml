@@ -9,7 +9,7 @@ resources:
   source:
     email: reagul.gmail.com
     username: ravij
-    password: Welcome123
+    password: 03m0masdf
     repository: ravij/concourse-tutorial-helloworld
 
 jobs:
